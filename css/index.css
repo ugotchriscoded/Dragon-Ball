@@ -3,6 +3,38 @@ header{
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
-    font-family: 'Courier New', Courier, monospace;
     font-size: large;
+}
+
+.dragonBallLogo{
+    width: 600px;
+}
+
+body{
+    background-image: url(../img/dragonBallWallpaper.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.charactersTitle{
+display: flex;
+justify-content: center;
+color: #FFFFFF;
+}
+
+.planetsTitle{
+display: flex;
+justify-content: center;
+color: #FFFFFF;
+}
+
+.footerText{
+display:flex;
+justify-content: center;
+text-align: end;
+text-align: center;
+}
+
+a{
+    text-decoration: none;
 }
