@@ -1,23 +1,23 @@
-const requestURL = 'https://dragonball-api.com/api/planets?limit=20';
+const requestURL = "https://dragonball-api.com/api/planets?limit=20";
 
 async function fetchPlanetsJson(){
     const response = await fetch(requestURL);
     try{
         if (!response.ok) {
-            throw new Error(`Fail to request Json ${response.status}`);
+            throw new Error(`Error en la petición al Json ${response.status}`);
         }
         return await response.json();
     }
     catch (error){
-        console.error('Fail to obtain the planets in Api : ', error);
+        console.error('Error al obtener los planetas de la Api : ', error);
         return null;
     }
    
 }
 
-function createPlanetsCard ({ name, image}){
+function createPlanetsCard ({name, image}){
     return `
-        <div class="card" style="width: 200px;">
+        <div class="card" style="width: 550px;">
             <img src="${image}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${name}</h5>
@@ -27,16 +27,16 @@ function createPlanetsCard ({ name, image}){
 }
 
 async function displayPlanets() {
-    const planetSection = document.getElementById('planetSection');
+    const planetsSection = document.getElementById('planetsSection');
     const planetsData = await fetchPlanetsJson();
 
     if (planetsData && planetsData.items){
-        const planetCards = planetsData.items.map(createPlanetsCard).join('');
-        planetSection.innerHTML = planetCards;
+        const planetsCards = planetsData.items.map(createPlanetsCard).join('');
+        planetsSection.innerHTML = planetsCards;
     }
     else
     {
-        planetSection.innerHTML = `<p>Fail to charge planets Json</p>`;    
+        planetsSection.innerHTML = `<p>No se ha podido cargar el Json de los planetas</p>`;    
     }
 }
 

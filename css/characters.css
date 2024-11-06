@@ -1,4 +1,6 @@
-.card2{
+.cardCharacters{
+    gap: 10px;
+    background-color: orange;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

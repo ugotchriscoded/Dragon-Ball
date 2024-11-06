@@ -4,29 +4,29 @@ async function fetchCharactersJson(){
     const response = await fetch(requestURL);
     try{
         if (!response.ok) {
-            throw new Error(`Fail to request Json ${response.status}`);
+            throw new Error(`Error en la petición al Json ${response.status}`);
         }
         return await response.json();
     }
     catch (error){
-        console.error('Fail to obtain the characters in Api : ', error);
+        console.error('Error al obtener los personajes de la Api : ', error);
         return null;
     }
    
 }
 
-function createCharacterCard ({name, gender, ki, maxKi, race, image, affiliation}){
+function createCharactersCard ({name, ki, maxKi, gender, affiliation, race, image}){
     return `
-        <div class="cards">
-            <img src="${image}" class="cardImgTop" alt="Dragon Ball Character">
-            <div class="card-body, cardBody">
-                <h5 class="cardTitle">${name}</h5>
-                <p class="cardText">${race} - ${gender}</p>
+        <div class="card" style="width: 550px;">
+            <img src="${image}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${name}</h5>
+                <p class="card-text">${race} - ${gender}</p>
             </div>
-            <ul class="listGroup">
-                <li class="listGroupItem"><p>Base Ki: ${ki}</p></li>
-                <li class="listGroupItem"><p>Max Ki: ${maxKi}</p></li>
-                <li class="listGroupItem"><p>Affiliation: ${affiliation}</p></li>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">${maxKi}</li>
+                <li class="list-group-item">${affiliation}</li>
+                <li class="list-group-item">${ki}</li>
             </ul>
         </div>
 `;
@@ -37,12 +37,12 @@ async function displayCharacters() {
     const charactersData = await fetchCharactersJson();
 
     if (charactersData && charactersData.items){
-        const characterCards = charactersData.items.map(createCharacterCard).join('');
-        charactersSection.innerHTML = characterCards;
+        const charactersCards = charactersData.items.map(createCharactersCard).join('');
+        charactersSection.innerHTML = charactersCards;
     }
     else
     {
-        charactersSection.innerHTML = `<p>Fail to charge characters Json</p>`;    
+        charactersSection.innerHTML = `<p>No se ha podido cargar el Json de los personajes</p>`;    
     }
 }
 
