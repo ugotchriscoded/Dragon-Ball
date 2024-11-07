@@ -17,24 +17,27 @@ body{
 }
 
 .charactersTitle{
-display: flex;
-justify-content: center;
-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
 }
 
 .planetsTitle{
-display: flex;
-justify-content: center;
-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
 }
 
 .footerText{
-display:flex;
-justify-content: center;
-text-align: end;
-text-align: center;
+    display:flex;
+    justify-content: center;
+    text-align: end;
+    text-align: center;
 }
 
 a{
+    text-decoration: none;
+    color:black;
+}
+
+main{
     text-decoration: none;
 }
