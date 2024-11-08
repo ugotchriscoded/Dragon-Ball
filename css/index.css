@@ -1,0 +1,43 @@
+header{
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    font-size: large;
+}
+
+.dragonBallLogo{
+    width: 600px;
+}
+
+body{
+    background-image: url(../img/dragonBallWallpaper.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.charactersTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.planetsTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.footerText{
+    display:flex;
+    justify-content: center;
+    text-align: end;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+main{
+    text-decoration: none;
+}

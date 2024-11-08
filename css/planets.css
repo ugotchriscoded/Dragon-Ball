@@ -1,0 +1,44 @@
+.cardPlanets{
+    gap: 10px;
+    background-image: url(./img/cardsWallpaper.png);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.headerLogo{
+    width: 300px;
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.planetsSection{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    row-gap: 60px;
+    column-gap: 60px;
+}
+.cardImgTop{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    align-self: center;
+}
+.cardCard{
+    margin: 40px;
+}
+
+.footerText{
+    display:flex;
+    justify-content: center;
+    text-align: end;
+    text-align: center;
+}
