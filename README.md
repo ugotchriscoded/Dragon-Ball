@@ -63,5 +63,3 @@
    ![card](https://github.com/user-attachments/assets/31dd5544-baa6-41a6-b4c4-e861a0f0a0a4)
    ![image](https://github.com/user-attachments/assets/a4c15b16-a7cd-4b28-bb0a-d3de7ab7f548)
 
-
-
