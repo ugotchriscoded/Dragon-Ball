@@ -15,3 +15,30 @@
     margin-right: auto;
     width: 50%;
 }
+
+.charactersSection{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cardImgTop{
+    display: flex;
+    min-width: 150px;
+    max-width: 250px;
+    min-height: 100px;
+    max-height: 300px;
+    align-self: center;
+}
+
+.cardCard{
+    margin: 40px;
+}
+
+.footerText{
+    display:flex;
+    justify-content: center;
+    text-align: end;
+    text-align: center;
+}

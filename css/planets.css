@@ -17,3 +17,28 @@
     margin-right: auto;
     width: 50%;
 }
+
+.planetsCard{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    row-gap: 60px;
+    column-gap: 60px;
+}
+.cardImgTop{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    align-self: center;
+}
+.cardCard{
+    margin: 40px;
+}
+
+.footerText{
+    display:flex;
+    justify-content: center;
+    text-align: end;
+    text-align: center;
+}
